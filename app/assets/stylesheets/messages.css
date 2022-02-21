@@ -1,0 +1,53 @@
+/* 画面のベース */
+.wrapper {
+  display: flex;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00ffff;
+}
+
+.side_bar {
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+}
+
+/* メイン側のベース */
+.main_header {
+  height: 100px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 40px;
+}
+
+.main_cont {
+  height: calc(100% - 100px - 90px);
+  width: 100%;
+  background-color: #fafafa;
+  padding: 46px 40px 0px 40px;
+}
+
+.main_footter {
+  height: 90px;
+  width: 100%;
+  background-color: #dddddd;
+  padding: 20px 40px;
+}
+
+/* サイドバー側のベース */
+.side_header {
+  height: 100px;
+  width: 100%;
+  background-color: #253141;
+  padding: 0 20px;
+}
+
+.side_member {
+  height: calc(100% - 100px);
+  width: 100%;
+  background-color: #2f3e51;
+  padding: 0 20px;
+}
