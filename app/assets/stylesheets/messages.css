@@ -1,6 +1,7 @@
-/* 画面のベース */
+/************* 画面のベース */
 .wrapper {
   display: flex;
+  overflow: none;
 }
 
 .main {
@@ -15,7 +16,7 @@
   background-color: #253141;
 }
 
-/* メイン側のベース */
+/**************************** メイン側のベース */
 .main_header {
   height: 100px;
   width: 100%;
@@ -37,17 +38,41 @@
   padding: 20px 40px;
 }
 
-/* サイドバー側のベース */
+/******************* サイドバー側のベース */
 .side_header {
   height: 100px;
   width: 100%;
   background-color: #253141;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* サイドバーー＞ヘッダー内 */
+.left_name {
+  color: #fafafa;
+  font-size: 16px;
 }
 
-.side_member {
+.make_chat_button {
+  color: deepskyblue;
+  font-size: 10px;
+  padding: 14px;
+  border: 1px solid lightblue;
+}
+
+/* サイドバーー＞一覧欄 */
+.chat_room {
   height: calc(100% - 100px);
   width: 100%;
   background-color: #2f3e51;
   padding: 0 20px;
+  overflow: scroll;
 }
+
+.room {
+  color: white;
+  padding: 20px 20px 40px 20px;
+}
+
+
