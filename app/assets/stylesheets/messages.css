@@ -22,6 +22,8 @@
   width: 100%;
   background-color: #ffffff;
   padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main_cont {
@@ -29,6 +31,7 @@
   width: 100%;
   background-color: #fafafa;
   padding: 46px 40px 0px 40px;
+  overflow: scroll;
 }
 
 .main_footter {
@@ -37,6 +40,95 @@
   background-color: #dddddd;
   padding: 20px 40px;
 }
+
+/* メイン→＞ヘッダー内 */
+.room_name {
+  color: #000333;
+  font-size: 24px;
+  margin: 36px; 
+}
+
+.chat_exit_button {
+  color: darkred;
+  padding: 20px 20px;
+  margin: 20px 0;
+  border: 1px solid darkred;
+  display: flex;
+  align-items: center;
+}
+
+/* メインー＞メッセージ表示領域内  */
+.message {
+  border: 1px solid red;
+  padding: 10px 0 0 0;
+  margin: 0 0 40px 0;
+}
+
+.mes_header {
+  display: flex;
+}
+
+.mes_name {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.mes_date {
+  color: #000999;
+  font-size: 12px;
+  margin: 0 0 0 10px;
+}
+
+.mes_cont {
+  color: #434a54;
+  font-size: 14px;
+}
+
+/* メインー＞フッター内 */
+.mes_form {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.name_form {
+  width: 100%;
+  height: 50px;
+  padding: 0 0 0 10px;
+  background-color: white;
+  border: none;
+}
+
+.form_image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.send_form {
+  height: 50px;
+  font-size: 16px;
+  color: white;
+  background-color: #38aef0;
+  border: none;
+  padding: 0 20px;
+  margin: 0 0 0 15px;
+}
+
+.hidden {
+  display: none
+}
+
 
 /******************* サイドバー側のベース */
 .side_header {
