@@ -89,3 +89,10 @@ select {
   height: 80px;
   width: 100%;
 }
+
+/* index内 */
+.room_main_cont {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
