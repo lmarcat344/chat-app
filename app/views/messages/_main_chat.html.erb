@@ -11,90 +11,11 @@
 
 <%# **********メインコンテンツ ***************** %>
 <div class='main_cont'>
-  <div class='message'>
-    <div class='mes_header'>
-      <div class='mes_name'>
-        Tom
-      </div>
-      <div class='mes_date'>
-        2002/112
-      </div>
-    </div>
-    <div class='mes_cont'>
-      ohayou
-    </div>
-  </div>
-
-   <div class='message'>
-    <div class='mes_header'>
-      <div class='mes_name'>
-        Tom
-      </div>
-      <div class='mes_date'>
-        2002/112
-      </div>
-    </div>
-    <div class='mes_cont'>
-      ohayou
-    </div>
-  </div>
-
-   <div class='message'>
-    <div class='mes_header'>
-      <div class='mes_name'>
-        Tom
-      </div>
-      <div class='mes_date'>
-        2002/112
-      </div>
-    </div>
-    <div class='mes_cont'>
-      ohayou
-    </div>
-  </div>
-
-   <div class='message'>
-    <div class='mes_header'>
-      <div class='mes_name'>
-        Tom
-      </div>
-      <div class='mes_date'>
-        2002/112
-      </div>
-    </div>
-    <div class='mes_cont'>
-      ohayou
-    </div>
-  </div>
-
-   <div class='message'>
-    <div class='mes_header'>
-      <div class='mes_name'>
-        Tom
-      </div>
-      <div class='mes_date'>
-        2002/112
-      </div>
-    </div>
-    <div class='mes_cont'>
-      ohayou
-    </div>
-  </div>
-
-   <div class='message'>
-    <div class='mes_header'>
-      <div class='mes_name'>
-        Toms
-      </div>
-      <div class='mes_date'>
-        2002/112
-      </div>
-    </div>
-    <div class='mes_cont'>
-      ohayou
-    </div>
-  </div>
+    
+      <%= render partial: 'message', collection: @messages %>
+    
 </div>
+
 
 <%# ＊＊＊＊＊＊＊＊＊フッター＊＊＊＊＊＊＊ %>
 <div class='main_footter'>

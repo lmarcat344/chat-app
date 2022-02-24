@@ -4,6 +4,12 @@ class MessagesController < ApplicationController
 
   def index
 
+    @messages = @room.messages.includes(:user)
+    # @messages = @room.messages   ## @room.messagesからuserが取れないのは
+    # @messages.each do |message|   ## @roomにたくさんmessageがあり１つに絞れないため
+    #   binding.pry
+    # end
+    
   end
 
   def create
@@ -12,7 +18,7 @@ class MessagesController < ApplicationController
     before_mes_count = Message.count
     @create_message.save
 
-    if (before_mes_count + 1) != Message.count
+    if (before_mes_count + 1) == Message.count
       redirect_to action: :index
     else
       render action: :index
@@ -28,8 +34,8 @@ class MessagesController < ApplicationController
      # サイドバーのルーム名表示のため 
    room_id_temp = RoomUser.where(user_id: current_user.id) 
    @room_id = [] 
-      room_id_temp.each do |room| 
-   @room_id << Room.find(room.room_id) 
+   room_id_temp.each do |room| 
+      @room_id << Room.find(room.room_id) 
    end 
   end
 
