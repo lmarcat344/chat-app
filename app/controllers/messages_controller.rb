@@ -25,11 +25,11 @@ class MessagesController < ApplicationController
     end
   end
 
-  
+
 
   private
   def config_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id, room_id: params[:room_id])
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id, room_id: params[:room_id])
   end
 
   def get_sidebar_name
