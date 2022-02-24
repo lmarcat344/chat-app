@@ -4,18 +4,15 @@
   <div class='room_name'>
     <%= @room.name %>
   </div>
-  <a class='chat_exit_button' href='#'>
-    チャットを終了する
-  </a>
+  <div class='chat_exit_button'>
+    <%= link_to 'チャットを終了する', room_path(@room.id), method: :delete %>
+  </div>
 </div>
 
 <%# **********メインコンテンツ ***************** %>
 <div class='main_cont'>
-    
       <%= render partial: 'message', collection: @messages %>
-    
 </div>
-
 
 <%# ＊＊＊＊＊＊＊＊＊フッター＊＊＊＊＊＊＊ %>
 <div class='main_footter'>

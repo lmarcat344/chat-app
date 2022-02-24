@@ -16,14 +16,16 @@ class MessagesController < ApplicationController
     @create_room = Room.find(params[:room_id])
     @create_message = @create_room.messages.new(config_params)
     before_mes_count = Message.count
-    @create_message.save
+   
 
-    if (before_mes_count + 1) == Message.count
+    if  @create_message.save
       redirect_to action: :index
     else
       render action: :index
     end
   end
+
+  
 
   private
   def config_params
