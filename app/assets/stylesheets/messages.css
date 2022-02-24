@@ -87,6 +87,7 @@
 /* メインー＞フッター内 */
 .mes_form {
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }

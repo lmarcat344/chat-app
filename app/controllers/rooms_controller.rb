@@ -1,9 +1,9 @@
 class RoomsController < ApplicationController
   def index
-    room_temp = RoomUser.where(user_id: current_user.id)
-    @room = []
-    room_temp.each do |room|
-      @room << Room.find(room.room_id)
+    room_id_temp = RoomUser.where(user_id: current_user.id)
+    @room_id = []
+    room_id_temp.each do |room|
+      @room_id << Room.find(room.room_id)
     end
   end
   def new
@@ -19,6 +19,17 @@ class RoomsController < ApplicationController
       render :new
     end
   end
+
+  def show
+  end
+
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+
+    redirect_to action: :index
+  end
+
 
 
   private
